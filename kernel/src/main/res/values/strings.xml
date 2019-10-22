@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">kernel</string>
+
+    <string name="lbl_aceptar">ACEPTAR</string>
+    <string name="lbl_cancelar">CANCELAR</string>
+    <string name="lbl_compartir">COMPARTIR POR</string>
+    <string name="dialog_title_permisos">PERMISOS</string>
+    <string name="dialog_msj_permisos">La aplicacion no puede operar sin los permisos correspondientes. favor verifique</string>
+
+    <string name="dialog_title_cerrar_session">Cerrar Session</string>
+    <string name="dialog_msg_cerrar_session">Desea Cerrar Session</string>
+    <string name="alert_msj_blue">Su dispositivo no soporta bluetooth</string>
+    <string name="alert_title_blue">Alerta bluetooth</string>
+
+</resources>

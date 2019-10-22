@@ -1,0 +1,2 @@
+include ':app', ':kernel'
+rootProject.name='AppKernel'
