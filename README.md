@@ -11,6 +11,6 @@ allprojects {
 }
 
 dependencies {
-   implementation 'com.github.Reidyn:AndroidKernel:v1.0'
+   implementation 'com.github.Reidyn:AndroidKernel:v1.1'
 }
 ```
