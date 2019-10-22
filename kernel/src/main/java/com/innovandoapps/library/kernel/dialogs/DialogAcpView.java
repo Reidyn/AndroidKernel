@@ -4,10 +4,10 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 import com.innovandoapps.library.kernel.R;
 import com.innovandoapps.library.kernel.dialogs.listener.OnClickDialogListener;
 
@@ -15,7 +15,7 @@ import com.innovandoapps.library.kernel.dialogs.listener.OnClickDialogListener;
  * Created by windows 8.1 on 19/11/2017.
  */
 @SuppressLint("ValidFragment")
-public class DialogAcpView extends DialogFragment{
+public class DialogAcpView extends DialogFragment {
 
     private String tag;
     private String titulo;

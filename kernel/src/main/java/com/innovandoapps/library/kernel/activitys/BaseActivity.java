@@ -2,20 +2,19 @@ package com.innovandoapps.library.kernel.activitys;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
-
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.snackbar.Snackbar;
 import dmax.dialog.SpotsDialog;
 
 /**
  * @Autor Marcos Ramirez
  * Clase abstracta para generalizar los activitys
  */
-public abstract class BaseActivity extends AppCompatActivity{
+public abstract class BaseActivity extends AppCompatActivity {
 
    private AlertDialog dialogProgresIndeterminate;
 

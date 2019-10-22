@@ -1,8 +1,8 @@
 package com.innovandoapps.library.kernel.activitys;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.ViewGroup;
+import androidx.annotation.Nullable;
 
 public abstract class BaseDialogActivity extends BaseActivity {
 

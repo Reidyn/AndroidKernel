@@ -1,14 +1,15 @@
 package com.innovandoapps.library.kernel.adapters;
 
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public abstract class GenericPagerAdapter extends FragmentStatePagerAdapter {
 
-
-    public GenericPagerAdapter(FragmentManager fm) {
-        super(fm);
+    public GenericPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+        super(fm, behavior);
     }
 
     @Override

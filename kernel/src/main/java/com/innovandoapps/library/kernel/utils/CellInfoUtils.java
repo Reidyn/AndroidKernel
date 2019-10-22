@@ -15,7 +15,6 @@ import android.os.Build;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import com.innovandoapps.library.kernel.BuildConfig;
-
 import java.util.List;
 
 /**

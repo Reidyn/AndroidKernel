@@ -2,7 +2,6 @@ package com.innovandoapps.library.kernel.activitys;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
@@ -11,6 +10,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import androidx.annotation.Nullable;
 import com.innovandoapps.library.kernel.activitys.listener.OnErrorLoadWebListener;
 import com.innovandoapps.library.kernel.activitys.listener.OnProgressLoadWebListener;
 

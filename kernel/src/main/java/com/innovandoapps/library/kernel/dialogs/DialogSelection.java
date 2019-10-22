@@ -5,18 +5,18 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AlertDialog;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
 import com.innovandoapps.library.kernel.dialogs.listener.OnSelectItemListener;
 
 /**
  * Created by windows 8.1 on 18/02/2018.
  */
 @SuppressLint("ValidFragment")
-public class DialogSelection extends DialogFragment{
+public class DialogSelection extends DialogFragment {
 
     private String tag;
     private String titulo;

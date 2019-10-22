@@ -12,7 +12,7 @@ import java.util.Date;
 public class FechaUtil {
 
     /**
-     * Retorna una cadena de fecha actual con formato yyyy-MM-dd HH:mm:ss.SSS
+     * Retorna una cadena de fecha actual con formato yyyy-MM-dd HH:mm:ss
      * @return String de fecha
      */
     public static String getFechaActual(){

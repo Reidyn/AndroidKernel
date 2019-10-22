@@ -1,8 +1,8 @@
 package com.innovandoapps.library.kernel.activitys;
 
-import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
+import androidx.appcompat.widget.SearchView;
 
 public abstract class ToolbarSearchActivity extends BaseToolbarListActivity {
 

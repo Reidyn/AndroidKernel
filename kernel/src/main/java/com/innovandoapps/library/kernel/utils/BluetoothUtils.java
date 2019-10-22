@@ -5,7 +5,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v4.app.FragmentManager;
+import androidx.fragment.app.FragmentManager;
 import com.innovandoapps.library.kernel.R;
 import com.innovandoapps.library.kernel.dialogs.DialogAlertSimple;
 import com.innovandoapps.library.kernel.dialogs.listener.OnPositiveClickListener;
