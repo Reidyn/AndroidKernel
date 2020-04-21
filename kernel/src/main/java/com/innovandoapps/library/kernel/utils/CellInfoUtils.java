@@ -7,6 +7,9 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -14,7 +17,6 @@ import android.os.BatteryManager;
 import android.os.Build;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
-import com.innovandoapps.library.kernel.BuildConfig;
 import java.util.List;
 
 /**
@@ -66,15 +68,45 @@ public class CellInfoUtils {
      */
     public static boolean checkMockLocation(Context context){
         boolean isMockLocation = false;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            PackageManager pm = context.getPackageManager();
+            List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
             AppOpsManager opsManager = (AppOpsManager) context.getSystemService(Context.APP_OPS_SERVICE);
-            try{
-                isMockLocation = (opsManager.checkOp(AppOpsManager.OPSTR_MOCK_LOCATION, android.os.Process.myUid(), BuildConfig.APPLICATION_ID) == AppOpsManager.MODE_ALLOWED);
-            }catch (SecurityException ex){}
-        } else {
+            for (ApplicationInfo applicationInfo : packages) {
+                boolean isSystemPackage = ((applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0);
+                if(!isSystemPackage && hasAppPermission(context, applicationInfo.packageName, "android.permission.ACCESS_MOCK_LOCATION")){
+                    isMockLocation = true;
+                    break;
+                }
+            }
+        }else{
             isMockLocation = !Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ALLOW_MOCK_LOCATION).equals("0");
         }
         return isMockLocation;
+    }
+
+    /**
+     * @param context    Contexto del Activity
+     * @param app        String identificador de la aplicacion
+     * @param permission  String del permiso a validar
+     * @return Booleano si la aplicacion referenciada por el identificador tiene el permiso referenciado
+     */
+    public static boolean hasAppPermission(Context context, String app, String permission){
+        PackageManager packageManager = context.getPackageManager();
+        PackageInfo packageInfo;
+        try {
+            packageInfo = packageManager.getPackageInfo(app, PackageManager.GET_PERMISSIONS);
+            if(packageInfo.requestedPermissions!= null){
+                for (String requestedPermission : packageInfo.requestedPermissions) {
+                    if (requestedPermission.equals(permission)) {
+                        return true;
+                    }
+                }
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     /**
