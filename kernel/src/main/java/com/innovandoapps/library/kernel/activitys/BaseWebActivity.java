@@ -45,11 +45,6 @@ public abstract class BaseWebActivity extends BaseActivity {
     @Override
     public void initController() {}
 
-    @Override
-    public int getLayoutResources() {
-        return 0;
-    }
-
     private void cargarPagina(){
         webView.setWebViewClient(new WebViewClient(){
             @Override
