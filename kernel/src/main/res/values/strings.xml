@@ -13,5 +13,6 @@
     <string name="alert_title_blue">Alerta bluetooth</string>
     <string name="lbl_btn_ant">Anterior</string>
     <string name="lbl_btn_sgt">Siguiente</string>
+    <string name="dialog_title_img">Ver Imagenes</string>
 
 </resources>
